@@ -10,16 +10,21 @@ public class OrderDaoTest {
 	
 	private OrderDao orderDao = new OrderDao();
 	
+	// 주문 테이블 및 주문도서 테이블에 데이터를 넣는다.
 	public void insertTest(Long member_no, String location) {
 		OrderVo vo = new OrderVo();
 		
 		vo.setMember_no(member_no);
 		vo.setLocation(location);
 		
+		//주문 테이블에 데이터 넣기
 		orderDao.insertOrder(vo);
+		
+		//주문도서 테이블에 데이터 넣기
 		orderDao.insertOrderBook();
 	}
 	
+	// 주문 테이블 조회하기
 	public void selectOrderTest() {
 		List<OrderVo> list = orderDao.getOrderList();
 		
@@ -29,6 +34,7 @@ public class OrderDaoTest {
 		
 	}
 	
+	// 주문도서 테이블 조회하기
 	public void selectOrderBookTest() {
 		List<CartVo> list = orderDao.getOrderBookList();
 		

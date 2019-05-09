@@ -9,6 +9,7 @@ public class MemberDaoTest {
 	
 	private MemberDao memberDao = new MemberDao();
 	
+	// 회원 테이블에 데이터를 넣는다
 	public void insertTest(String name, String tel, String email, String pw) {
 		
 		MemberVo vo = new MemberVo();
@@ -22,6 +23,7 @@ public class MemberDaoTest {
 		
 	}
 	
+	// 회원 테이블 조회하기
 	public void selectTest() {
 		
 		List<MemberVo> list = memberDao.getList();

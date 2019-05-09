@@ -9,6 +9,7 @@ public class BookDaoTest {
 	
 	private BookDao bookDao = new BookDao();
 	
+	// 도서 테이블에 데이터를 넣는다.
 	public void insertTest(String title, Long price, Long category_no) {
 		
 		BookVo vo = new BookVo();
@@ -21,6 +22,7 @@ public class BookDaoTest {
 		
 	}
 	
+	// 도서 테이블 조회하기
 	public void selectTest() {
 		List<BookVo> list = bookDao.getList();
 		

@@ -10,7 +10,8 @@ import java.util.List;
 import bookmall.vo.CartVo;
 
 public class CartDao extends ConnectionDao{
-
+	
+	// 카트 테이블 데이터 추가하기
 	public Boolean insert(CartVo vo) {
 		Boolean result = false;
 		
@@ -52,6 +53,7 @@ public class CartDao extends ConnectionDao{
 		return result;
 	}
 	
+	// 카트 테이블 조회하기
 	public List<CartVo> getList(){
 		List<CartVo> result = new ArrayList<CartVo>();
 		

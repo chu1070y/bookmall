@@ -9,6 +9,7 @@ public class CartDaoTest {
 	
 	private CartDao cartDao = new CartDao();
 	
+	// 카트 테이블에 데이터를 넣는다.
 	public void insertTest(Long member_no, Long book_no, Long quantity) {
 		
 		CartVo vo = new CartVo();
@@ -21,6 +22,7 @@ public class CartDaoTest {
 		
 	}
 	
+	// 카트 테이블 조회하기
 	public void selectTest() {
 		List<CartVo> list = cartDao.getList();
 		

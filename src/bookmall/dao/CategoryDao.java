@@ -10,7 +10,8 @@ import java.util.List;
 import bookmall.vo.CategoryVo;
 
 public class CategoryDao extends ConnectionDao{
-
+	
+	// 카테고리 테이블 데이터 추가
 	public Boolean insert(CategoryVo vo) {
 		Boolean result = false;
 		
@@ -50,6 +51,7 @@ public class CategoryDao extends ConnectionDao{
 		return result;
 	}
 	
+	// 카테고리 테이블 조회하기
 	public List<CategoryVo> getList(){
 		List<CategoryVo> result = new ArrayList<CategoryVo>();
 		

@@ -9,6 +9,7 @@ public class CategoryDaoTest {
 	
 	private CategoryDao categoryDao = new CategoryDao();
 	
+	// 카테고리 테이블에 데이터를 넣는다.
 	public void insertTest(String category) {
 		
 		CategoryVo vo = new CategoryVo();
@@ -19,6 +20,7 @@ public class CategoryDaoTest {
 		
 	}
 	
+	// 카테고리 테이블 조회하기
 	public void selectTest() {
 		List<CategoryVo> list = categoryDao.getList();
 		

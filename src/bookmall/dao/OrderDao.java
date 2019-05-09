@@ -12,6 +12,7 @@ import bookmall.vo.OrderVo;
 
 public class OrderDao extends ConnectionDao{
 	
+	// 주문 테이블 데이터 추가
 	public Boolean insertOrder(OrderVo vo) {
 		Boolean result = false;
 		
@@ -58,6 +59,7 @@ public class OrderDao extends ConnectionDao{
 		return result;
 	}
 	
+	// 주문도서 테이블 조회하기
 	public Boolean insertOrderBook() {
 		Boolean result = false;
 		
@@ -102,6 +104,7 @@ public class OrderDao extends ConnectionDao{
 		return result;
 	}
 	
+	// 주문도서 테이블에 데이터 넣기 전 카트에 있는 도서번호를 가져온다.
 	public List<Long> getBookNo() {
 		List<Long> result = new ArrayList<Long>();
 		
@@ -148,6 +151,7 @@ public class OrderDao extends ConnectionDao{
 		return result;
 	}
 	
+	// 주문 목록 조회하기
 	public List<OrderVo> getOrderList(){
 		List<OrderVo> result = new ArrayList<OrderVo>();
 		
@@ -205,6 +209,7 @@ public class OrderDao extends ConnectionDao{
 		return result;
 	}
 	
+	// 주문 도서 목록 조회하기
 	public List<CartVo> getOrderBookList(){
 		List<CartVo> result = new ArrayList<CartVo>();
 		

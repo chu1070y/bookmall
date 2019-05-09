@@ -11,6 +11,7 @@ import bookmall.vo.MemberVo;
 
 public class MemberDao extends ConnectionDao{
 	
+	// 회원 테이블 데이터 추가
 	public Boolean insert(MemberVo vo) {
 		Boolean result = false;
 		
@@ -53,6 +54,7 @@ public class MemberDao extends ConnectionDao{
 		return result;
 	}
 	
+	// 회원 테이블 조회하기
 	public List<MemberVo> getList(){
 		List<MemberVo> result = new ArrayList<MemberVo>();
 		

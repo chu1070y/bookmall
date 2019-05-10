@@ -1,32 +1,30 @@
 package bookmall.test;
 
-import java.util.List;
-
 import bookmall.dao.CategoryDao;
 import bookmall.vo.CategoryVo;
 
 public class CategoryDaoTest {
-	
-	private CategoryDao categoryDao = new CategoryDao();
-	
+
+	public static void main(String[] args) {
+
+		// 카테고리 넣기
+		categoryInsert("소설");
+		categoryInsert("인문");
+		categoryInsert("IT");
+
+	}
+
 	// 카테고리 테이블에 데이터를 넣는다.
-	public void insertTest(String category) {
-		
+	public static void categoryInsert(String category) {
+
+		CategoryDao categoryDao = new CategoryDao();
+
 		CategoryVo vo = new CategoryVo();
-		
+
 		vo.setCategory(category);
-		
+
 		categoryDao.insert(vo);
-		
+
 	}
-	
-	// 카테고리 테이블 조회하기
-	public void selectTest() {
-		List<CategoryVo> list = categoryDao.getList();
-		
-		for(CategoryVo vo : list) {
-			System.out.println("[카테고리목록] 카테고리: " + vo.getCategory());
-		}
-		
-	}
+
 }
